@@ -5,100 +5,210 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif;
-  line-height: 1.7;
-  color: #333;
-  background: #fafafa;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.8;
+  color: #e2e8f0;
+  background: #0f172a;
 }
 
-main {
-  max-width: 800px;
+.container {
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
+/* Hero */
 .hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 3rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  padding: 4rem 1.5rem;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #f8fafc;
+  margin-bottom: 1rem;
 }
 
-.tagline {
-  font-size: 1.1rem;
-  color: #666;
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 2.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+section:nth-child(even) {
+  background: #1e293b;
+}
+
+section:nth-child(odd) {
+  background: #0f172a;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid #333;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
+.section-lead {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* Cards */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.2rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+section:nth-child(even) .card {
+  background: #0f172a;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
 }
 
 .card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #94a3b8;
+  line-height: 1.7;
 }
 
-.links ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-
-.links a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid #333;
-  padding-bottom: 2px;
-}
-
-.links a:hover {
-  color: #000;
-  border-color: #666;
-}
-
-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
+/* Profile */
+.profile-content {
+  max-width: 640px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 0.85rem;
-  color: #999;
 }
 
-.ai-note {
-  margin-top: 0.3rem;
-  font-size: 0.75rem;
+.profile-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
+.profile-content p {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 2.5rem 0;
+  background: #0f172a;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #3b82f6;
+}
+
+.copyright {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
   .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 3.5rem 0;
   }
 }
