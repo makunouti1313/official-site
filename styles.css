@@ -9,37 +9,49 @@ body {
   line-height: 1.8;
   color: #e2e8f0;
   background: #0f172a;
+  letter-spacing: 0.04em;
 }
 
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 /* Hero */
 .hero {
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  padding: 4rem 1.5rem;
+  background:
+    linear-gradient(135deg, #0f172a 0%, #1a2640 30%, #1e293b 50%, #1a2640 70%, #0f172a 100%);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: #f8fafc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .hero .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #94a3b8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.06em;
 }
 
 /* CTA Button */
@@ -48,10 +60,11 @@ body {
   background: #3b82f6;
   color: #fff;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.9rem 2.5rem;
-  border-radius: 6px;
+  font-size: 0.95rem;
+  padding: 0.85rem 2.5rem;
+  border-radius: 3px;
   text-decoration: none;
+  letter-spacing: 0.06em;
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -62,7 +75,7 @@ body {
 
 /* Sections */
 section {
-  padding: 5rem 0;
+  padding: 7rem 0;
 }
 
 section:nth-child(even) {
@@ -74,33 +87,46 @@ section:nth-child(odd) {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: #f8fafc;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   text-align: center;
+  text-transform: uppercase;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #3b82f6;
+  margin: 0.8rem auto 0;
 }
 
 .section-lead {
   text-align: center;
   color: #94a3b8;
-  margin-bottom: 2.5rem;
-  font-size: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
 }
 
 /* Cards */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .card {
   background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
-  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -109,46 +135,43 @@ section:nth-child(even) .card {
 }
 
 .card:hover {
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
   transform: translateY(-3px);
 }
 
-.card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
 .card h3 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #f8fafc;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.04em;
 }
 
 .card p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #94a3b8;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* Profile */
 .profile-content {
   max-width: 640px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   text-align: center;
 }
 
 .profile-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #f8fafc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.08em;
 }
 
 .profile-content p {
   color: #94a3b8;
-  font-size: 1rem;
-  line-height: 1.9;
+  font-size: 0.92rem;
+  line-height: 2;
 }
 
 /* Contact */
@@ -158,7 +181,7 @@ section:nth-child(even) .card {
 
 /* Footer */
 footer {
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   background: #0f172a;
   border-top: 1px solid #1e293b;
   text-align: center;
@@ -167,15 +190,17 @@ footer {
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-links a {
   color: #64748b;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
@@ -185,13 +210,14 @@ footer {
 
 .copyright {
   color: #475569;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
 }
 
 /* Responsive */
 @media (min-width: 640px) {
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .cards {
@@ -201,7 +227,7 @@ footer {
 
 @media (max-width: 639px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero .subtitle {
@@ -209,6 +235,6 @@ footer {
   }
 
   section {
-    padding: 3.5rem 0;
+    padding: 5rem 0;
   }
 }
